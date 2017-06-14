@@ -1,0 +1,108 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #fff;
+  color: #252525;
+  font-family: "consolas", monospace;
+  font-size: 1.5em;
+  /* 字体样式 有选择斜体粗体正常体 */
+  font-style: normal;
+  /* font-weight 属性设置文本的粗细 数字值 400 相当于 关键字 normal，700 等价于 bold */
+  font-weight: 400;
+  /* 设置数字，此数字会与当前的字体尺寸相乘来设置行间距。 */
+  line-height: 1.45;
+  position: relative;
+  /* 字体抗锯齿 */
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+section {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.header {
+  color: white;
+  text-align: center;
+  padding-top: 15rem;
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-bottom: 15rem;
+  background: url("../img/1.jpg") 0 / cover fixed;
+}
+
+.header main {
+  background: hsla(0, 0%, 30%, 0.5);
+  padding: 2rem 0;
+  position: relative;
+  z-index: 0;
+}
+
+.header main::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("../img/1.jpg") 0 / cover fixed;
+  -webkit-filter: blur(20px);
+  filter: blur(20px);
+  z-index: -1;
+  margin: -3em;
+}
+
+.header-headline {
+  font-size: 3.6rem;
+  font-weight: 400;
+  margin: 0 0 1em 0;
+}
+
+.header-lead {
+  font-size: 1.2em;
+  font-weight: 400;
+  margin-bottom: 2em;
+}
+
+.section-header {
+  font-size: 2rem;
+  margin-bottom: 1.5em;
+}
+
+.section-header a:hover:after {
+  content: "#";
+  padding-left: 0.35em;
+  opacity: 0.35;
+}
+
+.section-header a {
+  text-decoration: none;
+}
+
+.btn {
+  padding: 0.75em 1.5em;
+  border: 1px solid #252525;
+  border-radius: 0.4em;
+  box-shadow: 0 1px 1px gray;
+  color: #252525;
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-decoration: none;
+  -webkit-transition: color 200ms ease-in-out, background-color 100ms ease-in-out;
+  transition: color 200ms ease-in-out, background-color 100ms ease-in-out;
+  display: inline-block;
+  margin-bottom: 0.5em;
+}
+
+.btn:hover {
+  background-color: #252525;
+  color: #fff;
+}
+
+.btn:active {
+  -webkit-transform: scale(0.98);
+  transform: scale(0.98);
+}
