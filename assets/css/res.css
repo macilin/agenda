@@ -1,0 +1,84 @@
+body {
+  /*background-image: url("images/login/loginBac.jpg");*/
+  ;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: #E8E8FF;
+}
+
+#res_frame {
+  width: 500px;
+  height: 460px;
+  padding: 13px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -300px;
+  margin-top: -250px;
+  background-color: rgba(240, 255, 255, 0.5);
+  border-radius: 10px;
+  text-align: center;
+}
+
+form p > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#image_logo {
+  margin-top: 22px;
+}
+
+.form-group {
+  font-size: 16px;
+  font-family: 宋体;
+  width: 80px;
+  height: 35px;
+  line-height: 28px;
+  text-align: center;
+  color: white;
+  background-color: #90e8fe;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.form-control {
+  font-size: 16px;
+  width: 278px;
+  height: 35px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: 0;
+}
+
+#fm-register-submit {
+  font-size: 16px;
+  font-family: 宋体;
+  width: 120px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  color: white;
+  background-color: #90e8fe;
+  border-radius: 6px;
+  border: 0;
+  float: left;
+}
+
+#forget_pwd {
+  font-size: 12px;
+  color: purple;
+  text-decoration: none;
+  position: relative;
+  float: right;
+  top: 5px;
+}
+
+#forget_pwd:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+#login_control {
+  padding: 0 28px;
+}

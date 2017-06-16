@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Agenda【注册】</title>
+  <link rel="stylesheet" type="text/css" href="/css/res.css" />
+  <script type="text/javascript" src="login.js"></script>
+</head>
+
+<body>
+  <div id="res_frame">
+    <p id="image_logo"><img src="img/login.jpg"></p>
+    <form method="post" action="/api/login" id="fm-register" class="form-inline text-center">
+      <p>
+        <label class="form-group">用户名： </label>
+        <input class="form-control" type="text" name="name" placeholder=" 请输入用户名" />
+      </p>
+      <p>
+        <label class="form-group">&nbsp密码： </label>
+        <input class="form-control" type="password" name="password" placeholder=" 请输入密码" />
+      </p>
+      <p>
+        <label class="form-group">&nbsp邮箱： </label>
+        <input class="form-control" type="email" name="email" placeholder=" 请输入邮箱" />
+      </p>
+      <p>
+        <label class="form-group">&nbsp电话： </label>
+        <input class="form-control" type="text" name="phone" placeholder=" 请输入电话" />
+      </p>
+    </form>
+    <div class="text-center">
+      <a href="#" id="fm-register-submit" type="submit" class="btn">注册</a>
+    </div>
+  </div>
+</body>
+
+</html>

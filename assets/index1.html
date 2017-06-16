@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="shortcut icon" href="./favicon.ico" type="image/vnd.microsoft.icon" />
+  <title>Agenda</title>
+</head>
+
+<body>
+  <header class="header container-fluid">
+    <main>
+      <h1 class="header-headline">Welcome to Agenda</h1>
+      <div class="header-action">
+      </div>
+    </main>
+  </header>
+  <section class="container">
+    <section id="log" class="row text-center">
+      <form method="post" action="/api/login" id="fm1" class="form-inline text-center">
+        <label class="form-group">
+          用户名:
+          <input class="form-control" type="text" name="name" placeholder="请输入用户名" value="" />
+        </label>
+        <p></p>
+        <label class="form-group">&nbsp&nbsp密码:
+          <input class="form-control" type="password" name="password" placeholder="请输入密码" value="" />
+        </label>
+        <p></p>
+        <a href="#" id="fm1-submit" type="submit" class="btn">登录</a>
+      </form>
+    </section>
+    <section id="section-register" class="row">
+      <h2 class="section-header">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> 注册新用户
+        </h2>
+      <form method="post" action="/api/login" id="fm-register" class="form-inline text-center">
+        <label class="form-group">用户名：
+          <input class="form-control" type="text" name="name" placeholder="请输入用户名" />
+        </label>
+        <p></p>
+        <label class="form-group">&nbsp&nbsp密码：
+          <input class="form-control" type="password" name="password" placeholder="请输入密码" />
+        </label>
+        <p></p>
+        <label class="form-group">&nbsp&nbsp邮箱：
+          <input class="form-control" type="email" name="email" placeholder="请输入邮箱" />
+        </label>
+        <p></p>
+        <label class="form-group">&nbsp&nbsp电话：
+          <input class="form-control" type="text" name="phone" placeholder="请输入电话
+" />
+        </label>
+      </form>
+      <div class="text-center">
+        <br/>
+        <a href="#" id="fm-register-submit" type="submit" class="btn">注册</a>
+      </div>
+    </section>
+    <section id="section-user" class="row">
+      <h2 class="section-header">
+            <span class="glyphicon glyphicon-user" aria-hidden="true"></span> User Operation
+        </h2>
+      <form action="GET" id="fm-user" class="form-inline text-center">
+        <label class="form-group">
+          Type:
+          <select name="type" id="fm-user-select" class="form-control">
+            <option value="o">退出登录</option>
+            <option value="dc">注销账户</option>
+          </select>
+        </label>
+        <a href="#" class="btn" id="fm-user-submit">Fetch</a>
+      </form>
+    </section>
+    <section id="t1" class="row">
+      <h2 class="section-header">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span> 查看
+      <!-- <div id="t1-r" class="well">
+  // The Result will replace here!
+  <br/> // Please make sure you have been logged on.
+</div>
+ -->
+      <form id="t1-fm" class="form-inline text-center" action="get">
+        <label class="form-group">
+          Type:
+          <select name="type" class="form-control">
+            <option value="lu">查看所有用户</option>
+            <option value="la">查看所有会议</option>
+            <option value="las">查看所有发起的会议</option>
+            <option value="lap">查看所有参与的会议</option>
+          </select>
+        </label>
+        <a href="#" class="btn" id="t1-submit">查询</a>
+      </form>
+    </section>
+    <section id="t2" class="row">
+      <h2 class="section-header">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> 创建会议
+        </h2>
+      <!-- <div id="t2-r" class="well">
+  // The Result will replace here!
+  <br/> // Please make sure you have been logged on.
+</div>
+ -->
+      <form id="t2-fm" class="form-horizontal" action="get">
+        <div class="form-group">
+          <label class="col-sm-3 control-label" for="title-input">会议名称</label>
+          <div class="col-sm-8">
+            <input class="form-control" type="text" name="title" id="title-input" value="" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-3 control-label" for="participator-input">参与者</label>
+          <div class="col-sm-8">
+            <input class="form-control" type="text" name="participators" id="participator-input" value="" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-3 control-label" for="start-date-input">开始时间</label>
+          <div class="col-sm-3">
+            <input class="form-control" type="datetime-local" name="startDate" id="start-date-input" value="" />
+          </div>
+          <label class="col-sm-2 control-label" for="start-end-input">结束时间</label>
+          <div class="col-sm-3">
+            <input class="form-control" type="datetime-local" name="endDate" id="start-end-input" value="" />
+          </div>
+        </div>
+        <div class="form-group text-center">
+          <a href="#" class="btn" id="t2-submit">创建</a>
+        </div>
+      </form>
+    </section>
+    <section id="t3" class="row">
+      <h2 class="section-header">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span> 查询会议
+        </h2>
+      <!-- <div id="t3-r" class="well">
+        // The Result will replace here!
+        <br/> // Please make sure you have been logged on.
+      </div> -->
+      <form id="t3-fm" class="form-horizontal" action="get">
+        <div class="form-group">
+          <label class="col-sm-1 control-label" for="t3-type-select">Type:</label>
+          <div class="col-sm-3">
+            <select id="t3-type-select" name="type" class="form-control">
+              <option value="qm">根据名称查询</option>
+              <option value="qt">根据日期查询</option>
+            </select>
+          </div>
+          <label id="t3-replace-label" class="col-sm-2 control-label" for="query-title-input">
+          </label>
+          <div id="t3-replace-input" class="col-sm-6">
+            <input class="form-control" type="text" name="title" id="query-title-input" placeholder="请输入会议名称" value="" />
+          </div>
+        </div>
+        <div class="form-group text-center">
+          <a href="#" class="btn" id="t3-submit">查询</a>
+        </div>
+      </form>
+    </section>
+    <div id="footer">
+      <p id="p1">
+        渣渣出品</p>
+    </div>
+  </section>
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/baffle.min.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
